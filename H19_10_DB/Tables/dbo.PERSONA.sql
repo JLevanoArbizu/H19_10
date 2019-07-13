@@ -1,0 +1,16 @@
+CREATE TABLE [dbo].[PERSONA]
+(
+[IDPER] [int] NOT NULL IDENTITY(1, 1),
+[NOMPER] [varchar] (50) COLLATE Modern_Spanish_CI_AS NULL,
+[APEPER] [varchar] (50) COLLATE Modern_Spanish_CI_AS NULL,
+[USEPER] [varchar] (50) COLLATE Modern_Spanish_CI_AS NULL,
+[PSWPER] [char] (1) COLLATE Modern_Spanish_CI_AS NULL,
+[FECPER] [date] NULL,
+[DNIPER] [char] (8) COLLATE Modern_Spanish_CI_AS NULL,
+[CELPER] [char] (11) COLLATE Modern_Spanish_CI_AS NULL,
+[TIPPER] [char] (1) COLLATE Modern_Spanish_CI_AS NULL,
+[ESTPER] [char] (1) COLLATE Modern_Spanish_CI_AS NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[PERSONA] ADD CONSTRAINT [PK__PERSONA__98FE8B7EC726E666] PRIMARY KEY CLUSTERED  ([IDPER]) ON [PRIMARY]
+GO

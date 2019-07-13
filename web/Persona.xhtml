@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+
+    <p:dialog
+        
+        <head>
+            <title>TODO supply a title</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </head>
+        <h:body>
+            <div>TODO write content</div>
+
+            <p:dialog>
+
+                <h:form id="id">             
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="monbre"/>
+                        <p:inputText value="#{SD}" required="true" requiredMessage="INGRESE NOMBRES"/>
+                    </p:panelGrid>
+                    <p:commandButton value="REGISTRAR" actionListener="#{persona}" 
+                    <p:commandButton value="Cancelar" immediate="true" oncomplete="PF('wdlgDatos').hide();"/>
+                </h:form>
+            </p:dialog>
+            <p:dialog>
+                <h:form>
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="NOMBRE"/>
+                        <p:inputText value="#{persona}"/>
+                    </p:panelGrid>
+
+                    <p:commandButton value="REGISTRAR"actionListener="#{persona}" 
+                                     oncomplete=" PF('wdlgRegistrar').hide();"
+                                     update=":form:dtTable"/>                                     
+                    <p:commandButton value="Cancelar" oncomplete=" PF('wdlgRegistrar').hide();"/>
+                </h:form>
+
+
+            </p:dialog>
+        </h:body>
+
+    </p:dialog>
+</html>
+ 
